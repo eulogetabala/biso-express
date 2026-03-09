@@ -33,7 +33,7 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="space-y-6">
             <Link href="/" className="inline-block">
-              <Image src="/logo.png" alt="Biso Express" width={200} height={65} className="brightness-0 invert transition-all duration-300" />
+              <Image src="/logo-2.jpg" alt="Biso Express" width={200} height={65} className="transition-all duration-300 rounded-lg" />
             </Link>
             <p className="text-slate-400 leading-relaxed">
               Biso Express est votre partenaire de confiance pour toutes vos livraisons urbaines. 
