@@ -78,11 +78,11 @@ export default function Footer() {
             <ul className="space-y-4 mb-8">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0" />
-                <span>Centre-Ville, Brazzaville, Congo</span>
+                <span>1302 Avenue de la base Batignolles, Brazzaville, Congo</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <span>+242 00 000 00 00</span>
+                <span>+242 06 763 48 48</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
