@@ -9,7 +9,7 @@ const footerLinks = {
   company: [
     { label: "À propos", href: "#" },
     { label: "Comment ça marche", href: "#comment-ca-marche" },
-    { label: "Services", href: "#services" },
+    { label: "Pourquoi nous", href: "#pourquoi-nous" },
     { label: "Zone de livraison", href: "#zone-de-livraison" },
   ],
   services: [
@@ -17,24 +17,11 @@ const footerLinks = {
     { label: "Livraison Professionnels", href: "#" },
     { label: "Suivi de colis", href: "#" },
     { label: "Tarifs", href: "#" },
-  ],
-  support: [
-    { label: "Centre d'aide", href: "#" },
-    { label: "Contact", href: "#contact" },
-    { label: "Conditions d'utilisation", href: "#" },
-    { label: "Confidentialité", href: "#" },
   ]
 };
 
 export default function Footer() {
   const { onOpen: openContact } = useContactModal();
-
-  const handleLinkClick = (e: React.MouseEvent, href: string, label: string) => {
-    if (label === "Contact") {
-      e.preventDefault();
-      openContact();
-    }
-  };
 
   return (
     <footer className="bg-slate-900 pt-20 pb-10 text-slate-300">
@@ -62,21 +49,7 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold text-lg mb-6" style={{ fontFamily: 'var(--font-outfit)' }}>Entreprise</h4>
             <ul className="space-y-4">
-              {Object.entries(footerLinks).map(([key, links]) => (
-                key === "company" && links.map((link, i) => (
-                  <li key={i}>
-                    <Link href={link.href} className="hover:text-primary transition-colors">{link.label}</Link>
-                  </li>
-                ))
-              ))}
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="text-white font-bold text-lg mb-6" style={{ fontFamily: 'var(--font-outfit)' }}>Services</h4>
-            <ul className="space-y-4">
-              {footerLinks.services.map((link, i) => (
+              {footerLinks.company.map((link, i) => (
                 <li key={i}>
                   <Link href={link.href} className="hover:text-primary transition-colors">{link.label}</Link>
                 </li>
@@ -84,42 +57,29 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Support */}
+          {/* Contact Express (Replaces Support) */}
           <div>
-            <h4 className="text-white font-bold text-lg mb-6" style={{ fontFamily: 'var(--font-outfit)' }}>Support</h4>
-            <ul className="space-y-4">
-              {footerLinks.support.map((link, i) => (
-                <li key={i}>
-                  <Link 
-                    href={link.href} 
-                    onClick={(e) => handleLinkClick(e, link.href, link.label)}
-                    className="hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact & Newsletter */}
-          <div className="lg:col-span-1">
             <h4 className="text-white font-bold text-lg mb-6" style={{ fontFamily: 'var(--font-outfit)' }}>Contact express</h4>
             <ul className="space-y-4 mb-8">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0" />
-                <span>1302 Avenue de la base Batignolles, Brazzaville, Congo</span>
+                <span className="text-sm">1302 Avenue de la base Batignolles, Brazzaville, Congo</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <span>+242 06 763 48 48</span>
+                <span className="text-sm">+242 06 763 48 48</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
-                <span>contact@biso-express.com</span>
+                <span className="text-sm">contact@biso-express.com</span>
               </li>
             </ul>
-            
+          </div>
+
+          {/* Newsletter */}
+          <div>
+            <h4 className="text-white font-bold text-lg mb-6" style={{ fontFamily: 'var(--font-outfit)' }}>Newsletter</h4>
+            <p className="text-sm text-slate-400 mb-6">Restez informé de nos offres.</p>
             <div className="relative">
               <input 
                 type="email" 
