@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Menu, Phone } from 'lucide-react';
 import { buttonVariants, Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { useBookingModal } from '@/hooks/use-booking-modal';
+import { useBookingModal, useContactModal } from '@/hooks/use-booking-modal';
 
 const navLinks = [
   { label: "Accueil", href: "/" },
@@ -17,7 +17,8 @@ const navLinks = [
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const { onOpen } = useBookingModal();
+  const { onOpen: openBooking } = useBookingModal();
+  const { onOpen: openContact } = useContactModal();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,7 +36,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="relative w-40 h-12 md:w-52 md:h-16 transition-all duration-300">
-            <Image src="/logo-2.jpg" alt="Biso Express" fill className="object-contain" />
+            <Image src="/logo-2.png" alt="Biso Express" fill className="object-contain" />
           </Link>
 
           <div className="hidden lg:flex items-center gap-10">
@@ -53,7 +54,7 @@ export default function Navbar() {
 
           <div className="flex items-center gap-4">
             <button
-              onClick={onOpen}
+              onClick={openContact}
               className={cn(buttonVariants({ size: "lg" }), "rounded-full bg-primary text-white font-bold h-11 px-8 border-none")}
             >
               Nous Contacter

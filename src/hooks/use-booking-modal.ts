@@ -1,12 +1,18 @@
 import { create } from 'zustand';
 
-interface BookingModalStore {
+interface ModalStore {
   isOpen: boolean;
   onOpen: () => void;
   onClose: () => void;
 }
 
-export const useBookingModal = create<BookingModalStore>((set) => ({
+export const useBookingModal = create<ModalStore>((set) => ({
+  isOpen: false,
+  onOpen: () => set({ isOpen: true }),
+  onClose: () => set({ isOpen: false }),
+}));
+
+export const useContactModal = create<ModalStore>((set) => ({
   isOpen: false,
   onOpen: () => set({ isOpen: true }),
   onClose: () => set({ isOpen: false }),

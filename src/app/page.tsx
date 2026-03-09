@@ -11,6 +11,7 @@ import StickyFooter from "@/components/StickyFooter";
 import Footer from "@/components/Footer";
 import Chatbot from "@/components/Chatbot";
 import BookingModal from "@/components/BookingModal";
+import ContactModal from "@/components/ContactModal";
 import FAQ from "@/components/FAQ";
 
 export default function Home() {
@@ -31,6 +32,7 @@ export default function Home() {
     
       <Chatbot />
       <BookingModal />
+      <ContactModal />
     </main>
   );
 }

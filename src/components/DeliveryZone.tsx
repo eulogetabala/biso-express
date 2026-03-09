@@ -6,7 +6,7 @@ import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-import { useBookingModal } from '@/hooks/use-booking-modal';
+import { useBookingModal, useContactModal } from '@/hooks/use-booking-modal';
 
 const DynamicMap = dynamic(() => import('./MapComponent'), { 
   ssr: false,
@@ -14,7 +14,8 @@ const DynamicMap = dynamic(() => import('./MapComponent'), {
 });
 
 export default function DeliveryZone() {
-  const { onOpen } = useBookingModal();
+  const { onOpen: openBooking } = useBookingModal();
+  const { onOpen: openContact } = useContactModal();
 
   return (
     <section className="py-24 bg-slate-900 text-white overflow-hidden relative">
@@ -83,7 +84,7 @@ export default function DeliveryZone() {
             </div>
 
             <button 
-              onClick={onOpen}
+              onClick={openContact}
               className={cn(buttonVariants({ size: "lg" }), "rounded-full px-10 h-14 text-lg font-bold bg-primary text-white border-none")}
             >
               Demander une info

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Facebook, Twitter, Instagram, Mail, Phone, MapPin, Send } from 'lucide-react';
+import { useContactModal } from '@/hooks/use-booking-modal';
 
 const footerLinks = {
   company: [
@@ -26,6 +27,15 @@ const footerLinks = {
 };
 
 export default function Footer() {
+  const { onOpen: openContact } = useContactModal();
+
+  const handleLinkClick = (e: React.MouseEvent, href: string, label: string) => {
+    if (label === "Contact") {
+      e.preventDefault();
+      openContact();
+    }
+  };
+
   return (
     <footer className="bg-slate-900 pt-20 pb-10 text-slate-300">
       <div className="container mx-auto px-4">
@@ -33,7 +43,7 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="space-y-6">
             <Link href="/" className="inline-block">
-              <Image src="/logo-2.jpg" alt="Biso Express" width={200} height={65} className="transition-all duration-300 rounded-lg" />
+              <Image src="/logo-2.png" alt="Biso Express" width={200} height={65} className="transition-all duration-300 rounded-lg" />
             </Link>
             <p className="text-slate-400 leading-relaxed">
               Biso Express est votre partenaire de confiance pour toutes vos livraisons urbaines. 
@@ -52,10 +62,12 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold text-lg mb-6" style={{ fontFamily: 'var(--font-outfit)' }}>Entreprise</h4>
             <ul className="space-y-4">
-              {footerLinks.company.map((link, i) => (
-                <li key={i}>
-                  <Link href={link.href} className="hover:text-primary transition-colors">{link.label}</Link>
-                </li>
+              {Object.entries(footerLinks).map(([key, links]) => (
+                key === "company" && links.map((link, i) => (
+                  <li key={i}>
+                    <Link href={link.href} className="hover:text-primary transition-colors">{link.label}</Link>
+                  </li>
+                ))
               ))}
             </ul>
           </div>
@@ -72,9 +84,27 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact & Newsletter */}
+          {/* Support */}
           <div>
-            <h4 className="text-white font-bold text-lg mb-6" style={{ fontFamily: 'var(--font-outfit)' }}>Contact</h4>
+            <h4 className="text-white font-bold text-lg mb-6" style={{ fontFamily: 'var(--font-outfit)' }}>Support</h4>
+            <ul className="space-y-4">
+              {footerLinks.support.map((link, i) => (
+                <li key={i}>
+                  <Link 
+                    href={link.href} 
+                    onClick={(e) => handleLinkClick(e, link.href, link.label)}
+                    className="hover:text-primary transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact & Newsletter */}
+          <div className="lg:col-span-1">
+            <h4 className="text-white font-bold text-lg mb-6" style={{ fontFamily: 'var(--font-outfit)' }}>Contact express</h4>
             <ul className="space-y-4 mb-8">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0" />
