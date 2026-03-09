@@ -32,11 +32,10 @@ export default function MapComponent() {
           // Darker variant if possible, or just standard
         />
         
-        {/* Main Office / Delivery Hub */}
         <Marker position={center}>
           <Popup>
             <div className="font-bold text-primary">Biso Express Hub</div>
-            <div className="text-xs">Nous livrons dans un rayon de 10km !</div>
+            <div className="text-xs">1302 Avenue de la base Batignolles</div>
           </Popup>
         </Marker>
 
