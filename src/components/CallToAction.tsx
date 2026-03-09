@@ -5,6 +5,7 @@ import { Phone, MessageCircle, Send } from 'lucide-react';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useBookingModal } from '@/hooks/use-booking-modal';
+import Link from 'next/link';
 
 export default function CallToAction() {
   const { onOpen } = useBookingModal();
@@ -29,18 +30,19 @@ export default function CallToAction() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button 
-                onClick={onOpen}
+              <Link 
+                href="tel:+242067634848"
                 className={cn(buttonVariants({ size: "lg", variant: "secondary" }), "rounded-full h-16 px-10 text-xl font-bold bg-white text-primary hover:bg-slate-100 hover:scale-105 transition-all shadow-2xl flex items-center gap-3 border-none")}
               >
                 <Phone className="w-6 h-6" /> Appeler maintenant
-              </button>
-              <button 
-                onClick={onOpen}
+              </Link>
+              <Link 
+                href="https://wa.me/242067634848"
+                target="_blank"
                 className={cn(buttonVariants({ size: "lg" }), "rounded-full h-16 px-10 text-xl font-bold border-2 border-white bg-transparent text-white hover:bg-white/10 hover:scale-105 transition-all shadow-2xl flex items-center gap-3")}
               >
                 <MessageCircle className="w-6 h-6" /> WhatsApp
-              </button>
+              </Link>
             </div>
             
             <p className="mt-12 text-white/70 font-medium flex items-center justify-center gap-2">

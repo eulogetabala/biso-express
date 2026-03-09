@@ -5,6 +5,7 @@ import { Phone, MessageCircle } from 'lucide-react';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useBookingModal } from '@/hooks/use-booking-modal';
+import Link from 'next/link';
 
 export default function StickyFooter() {
   const { onOpen } = useBookingModal();
@@ -22,22 +23,23 @@ export default function StickyFooter() {
         </div>
         
         <div className="flex gap-2 w-full sm:w-auto">
-          <button 
-            onClick={onOpen}
+          <Link 
+            href="tel:+242067634848"
             className={cn(buttonVariants({ size: "lg", variant: "secondary" }), "flex-1 sm:flex-none rounded-full bg-secondary text-white hover:bg-black gap-2 font-bold px-8 shadow-lg border-none")}
           >
             <Phone className="w-4 h-4" /> 
             <span className="hidden sm:inline">Appeler</span>
             <span className="sm:hidden">Appeler</span>
-          </button>
-          <button 
-            onClick={onOpen}
+          </Link>
+          <Link 
+            href="https://wa.me/242067634848"
+            target="_blank"
             className={cn(buttonVariants({ size: "lg" }), "flex-1 sm:flex-none rounded-full bg-[#25D366] hover:bg-[#22c35e] text-white gap-2 font-bold px-8 shadow-lg border-none")}
           >
             <MessageCircle className="w-4 h-4" />
             <span className="hidden sm:inline">WhatsApp</span>
             <span className="sm:hidden">WhatsApp</span>
-          </button>
+          </Link>
         </div>
       </motion.div>
     </div>
