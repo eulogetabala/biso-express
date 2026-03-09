@@ -18,7 +18,7 @@ export default function DeliveryZone() {
   const { onOpen: openContact } = useContactModal();
 
   return (
-    <section className="py-24 bg-slate-900 text-white overflow-hidden relative">
+    <section id="zone-de-livraison" className="py-24 bg-slate-900 text-white overflow-hidden relative">
       {/* Decorative patterns */}
       <div className="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">

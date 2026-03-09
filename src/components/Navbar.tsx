@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils';
 import { useBookingModal, useContactModal } from '@/hooks/use-booking-modal';
 
 const navLinks = [
-  { label: "Accueil", href: "/" },
+  { label: "Accueil", href: "#accueil" },
   { label: "Comment ça marche", href: "#comment-ca-marche" },
   { label: "Pourquoi nous", href: "#pourquoi-nous" },
   { label: "Zones", href: "#zone-de-livraison" },

@@ -29,7 +29,7 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="pourquoi-choisir" className="py-24 bg-white relative overflow-hidden">
+    <section id="pourquoi-nous" className="py-24 bg-white relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl" />
       
