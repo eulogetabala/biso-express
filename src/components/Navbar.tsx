@@ -36,7 +36,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="relative w-40 h-12 md:w-52 md:h-16 transition-all duration-300">
-            <Image src="/logo-2.png" alt="Biso Express" fill className="object-contain" />
+            <Image src="/logo.png" alt="Biso Express" fill className="object-contain" />
           </Link>
 
           <div className="hidden lg:flex items-center gap-10">

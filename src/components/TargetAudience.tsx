@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import { sectionHeaderStagger, staggerItem, viewportOnce } from '@/lib/motion';
 import { User, Store, Building2 } from 'lucide-react';
 
 const targets = [
@@ -28,24 +29,31 @@ export default function TargetAudience() {
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-secondary mb-6">
+        <motion.div
+          className="text-center max-w-3xl mx-auto mb-16"
+          variants={sectionHeaderStagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+        >
+          <motion.h2 variants={staggerItem} className="text-4xl md:text-5xl font-extrabold text-secondary mb-6">
             Un service pour particuliers et professionnels
-          </h2>
-          <p className="text-lg text-muted-foreground">
+          </motion.h2>
+          <motion.p variants={staggerItem} className="text-lg text-muted-foreground">
             Biso Express est la solution flexible qui s&apos;adapte à tous vos besoins de livraison urbaine.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {targets.map((target, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="group relative h-96 rounded-[2.5rem] overflow-hidden p-10 flex flex-col justify-end text-white shadow-2xl hover:-translate-y-2 transition-all duration-500"
+              initial={{ opacity: 0, y: 40, scale: 0.96 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={viewportOnce}
+              transition={{ type: "spring", stiffness: 90, damping: 18, delay: index * 0.12 }}
+              whileHover={{ y: -10, scale: 1.02 }}
+              className="group relative h-96 rounded-[2.5rem] overflow-hidden p-10 flex flex-col justify-end text-white shadow-2xl transition-shadow duration-500 hover:shadow-primary/20"
             >
               {/* Permanent Gradient Background */}
               <div className={`absolute inset-0 bg-gradient-to-br ${target.color} transition-transform duration-700 group-hover:scale-110`} />

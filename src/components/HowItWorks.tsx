@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
+import { sectionHeaderStagger, springBouncy, staggerItem, viewportOnce } from '@/lib/motion';
 import { Phone, Package, Send } from 'lucide-react';
 import gsap from 'gsap';
 import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
@@ -87,24 +88,27 @@ export default function HowItWorks() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_#f8fafc_0%,_transparent_70%)] pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-24">
-          <motion.span 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+        <motion.div
+          className="text-center max-w-3xl mx-auto mb-24"
+          variants={sectionHeaderStagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+        >
+          <motion.span
+            variants={staggerItem}
             className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block"
           >
             Processus Biso
           </motion.span>
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <motion.h2
+            variants={staggerItem}
             className="text-4xl md:text-6xl font-black text-secondary mb-6 leading-tight"
             style={{ fontFamily: 'var(--font-outfit)' }}
           >
             Le chemin vers une <br /> <span className="text-primary">livraison parfaite</span>
           </motion.h2>
-        </div>
+        </motion.div>
 
         <div className="relative max-w-5xl mx-auto">
           {/* Creative Looping Connection SVG - Brought to Foreground */}
@@ -144,11 +148,12 @@ export default function HowItWorks() {
             {steps.map((step, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.2, type: "spring", stiffness: 100 }}
-                className={`relative z-10 flex flex-col items-center text-center p-8 rounded-[2.5rem] bg-white/40 backdrop-blur-sm border border-white/50 shadow-2xl ${step.glow} group hover:-translate-y-4 transition-all duration-500`}
+                initial={{ opacity: 0, y: 40, scale: 0.92 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={viewportOnce}
+                transition={{ ...springBouncy, delay: index * 0.12 }}
+                whileHover={{ y: -10, scale: 1.03 }}
+                className={`relative z-10 flex flex-col items-center text-center p-8 rounded-[2.5rem] bg-white/40 backdrop-blur-sm border border-white/50 shadow-2xl ${step.glow} group transition-shadow duration-300 hover:shadow-primary/15`}
               >
                 <div className={`w-24 h-24 rounded-3xl bg-gradient-to-br ${step.color} text-white flex items-center justify-center mb-8 shadow-2xl relative overflow-hidden ring-8 ring-white/50 group-hover:ring-primary/20 transition-all`}>
                   <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />

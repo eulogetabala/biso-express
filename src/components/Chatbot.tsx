@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageSquare, X, Send, User, Bot, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { PHONE_DISPLAY } from '@/lib/contact';
 
 export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +31,7 @@ export default function Chatbot() {
 
     // Simulate bot response
     setTimeout(() => {
-      let botText = "C'est noté ! Un membre de notre équipe va vous répondre très rapidement via WhatsApp pour finaliser votre livraison. Vous pouvez aussi nous appeler directement au +242 06 000 00 00.";
+      let botText = `C'est noté ! Un membre de notre équipe va vous répondre très rapidement via WhatsApp pour finaliser votre livraison. Vous pouvez aussi nous appeler directement au ${PHONE_DISPLAY}.`;
       
       if (input.toLowerCase().includes('tarif') || input.toLowerCase().includes('prix')) {
         botText = "Nos tarifs dépendent de la distance et de la taille du colis. En général, c'est à partir de 1000 FCFA. Voulez-vous un devis précis ?";

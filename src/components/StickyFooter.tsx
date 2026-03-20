@@ -4,12 +4,10 @@ import { motion } from 'framer-motion';
 import { Phone, MessageCircle } from 'lucide-react';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { useBookingModal } from '@/hooks/use-booking-modal';
 import Link from 'next/link';
+import { PHONE_TEL_HREF, PHONE_WHATSAPP_HREF } from '@/lib/contact';
 
 export default function StickyFooter() {
-  const { onOpen } = useBookingModal();
-
   return (
     <div className="fixed bottom-0 left-0 right-0 z-[100] p-4 flex justify-center pointer-events-none">
       <motion.div 
@@ -24,7 +22,7 @@ export default function StickyFooter() {
         
         <div className="flex gap-2 w-full sm:w-auto">
           <Link 
-            href="tel:+242067634848"
+            href={PHONE_TEL_HREF}
             className={cn(buttonVariants({ size: "lg", variant: "secondary" }), "flex-1 sm:flex-none rounded-full bg-secondary text-white hover:bg-black gap-2 font-bold px-8 shadow-lg border-none")}
           >
             <Phone className="w-4 h-4" /> 
@@ -32,7 +30,7 @@ export default function StickyFooter() {
             <span className="sm:hidden">Appeler</span>
           </Link>
           <Link 
-            href="https://wa.me/242067634848"
+            href={PHONE_WHATSAPP_HREF}
             target="_blank"
             className={cn(buttonVariants({ size: "lg" }), "flex-1 sm:flex-none rounded-full bg-[#25D366] hover:bg-[#22c35e] text-white gap-2 font-bold px-8 shadow-lg border-none")}
           >

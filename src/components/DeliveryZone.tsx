@@ -1,12 +1,12 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import { fadeScale, sectionHeaderStagger, staggerItem, viewportOnce } from '@/lib/motion';
 import { MapPin, Info } from 'lucide-react';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import Link from 'next/link';
 import dynamic from 'next/dynamic';
-import { useBookingModal, useContactModal } from '@/hooks/use-booking-modal';
+import { useContactModal } from '@/hooks/use-booking-modal';
 
 const DynamicMap = dynamic(() => import('./MapComponent'), { 
   ssr: false,
@@ -14,7 +14,6 @@ const DynamicMap = dynamic(() => import('./MapComponent'), {
 });
 
 export default function DeliveryZone() {
-  const { onOpen: openBooking } = useBookingModal();
   const { onOpen: openContact } = useContactModal();
 
   return (
@@ -35,9 +34,11 @@ export default function DeliveryZone() {
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="lg:w-1/2">
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
+              variants={fadeScale}
+              initial="hidden"
+              whileInView="visible"
+              viewport={viewportOnce}
+              whileHover={{ scale: 1.015 }}
               className="relative aspect-square md:aspect-video lg:aspect-square rounded-[3rem] overflow-hidden border-8 border-white/5 shadow-[0_0_50px_rgba(255,122,0,0.1)] bg-slate-800"
             >
               <DynamicMap />
@@ -63,33 +64,50 @@ export default function DeliveryZone() {
             </motion.div>
           </div>
 
-          <div className="lg:w-1/2">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-extrabold mb-8"
-            >
+          <motion.div
+            className="lg:w-1/2 space-y-6"
+            variants={sectionHeaderStagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewportOnce}
+          >
+            <motion.h2 variants={staggerItem} className="text-4xl md:text-5xl font-extrabold mb-2">
               Nous livrons dans <span className="text-primary italic">toute la ville</span>
             </motion.h2>
-            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Biso Express assure la récupération et la livraison de vos colis dans différents quartiers de la ville. 
-              <br /><br />
+            <motion.p variants={staggerItem} className="text-xl text-slate-300 leading-relaxed">
+              Biso Express assure la récupération et la livraison de vos colis dans différents quartiers de la ville.
+              <br />
+              <br />
               Que vous soyez au centre-ville ou dans les zones résidentielles, nos livreurs sont prêts à intervenir rapidement.
-            </p>
-            
-            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 mb-10">
-              <p className="text-lg font-semibold text-primary mb-2">Vérifiez votre zone</p>
-              <p className="text-slate-400">Contactez-nous pour vérifier la disponibilité de la livraison dans votre zone spécifique.</p>
-            </div>
+            </motion.p>
 
-            <button 
-              onClick={openContact}
-              className={cn(buttonVariants({ size: "lg" }), "rounded-full px-10 h-14 text-lg font-bold bg-primary text-white border-none")}
+            <motion.div
+              variants={staggerItem}
+              whileHover={{ scale: 1.02, borderColor: "rgba(255,255,255,0.22)" }}
+              className="p-6 rounded-2xl bg-white/5 border border-white/10"
             >
-              Demander une info
-            </button>
-          </div>
+              <p className="text-lg font-semibold text-primary mb-2">Vérifiez votre zone</p>
+              <p className="text-slate-400">
+                Contactez-nous pour vérifier la disponibilité de la livraison dans votre zone spécifique.
+              </p>
+            </motion.div>
+
+            <motion.div variants={staggerItem}>
+              <motion.button
+                type="button"
+                onClick={openContact}
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: "spring", stiffness: 400, damping: 22 }}
+                className={cn(
+                  buttonVariants({ size: "lg" }),
+                  "rounded-full px-10 h-14 text-lg font-bold bg-primary text-white border-none"
+                )}
+              >
+                Demander une info
+              </motion.button>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>

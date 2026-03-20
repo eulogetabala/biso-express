@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import { sectionHeaderStagger, springBouncy, staggerItem, viewportOnce } from '@/lib/motion';
 import {
   Accordion,
   AccordionContent,
@@ -36,44 +37,43 @@ export default function FAQ() {
   return (
     <section id="faq" className="py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <motion.div
+          className="text-center max-w-3xl mx-auto mb-16"
+          variants={sectionHeaderStagger}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewportOnce}
+        >
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            variants={staggerItem}
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest mb-6"
           >
-            <HelpCircle className="w-4 h-4" /> Vos questions fréquentes
+            <motion.span
+              animate={{ rotate: [0, 12, -12, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <HelpCircle className="w-4 h-4" />
+            </motion.span>
+            Vos questions fréquentes
           </motion.div>
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-5xl font-extrabold text-secondary mb-6"
-          >
+          <motion.h2 variants={staggerItem} className="text-4xl md:text-5xl font-extrabold text-secondary mb-6">
             Tout ce que vous devez savoir
           </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-lg text-muted-foreground"
-          >
+          <motion.p variants={staggerItem} className="text-lg text-muted-foreground">
             Vous avez des questions sur nos services ? Voici les réponses aux interrogations les plus fréquentes pour vous aider.
           </motion.p>
-        </div>
+        </motion.div>
 
         <div className="max-w-3xl mx-auto">
           <Accordion className="w-full space-y-4">
             {faqs.map((faq, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: -24 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                viewport={viewportOnce}
+                transition={{ ...springBouncy, delay: index * 0.07 }}
+                whileHover={{ x: 4, transition: { type: "spring", stiffness: 300, damping: 20 } }}
               >
                 <AccordionItem 
                   value={`item-${index}`} 
@@ -92,11 +92,17 @@ export default function FAQ() {
         </div>
         
         {/* Decorative element */}
-        <div className="mt-16 text-center">
+        <motion.div
+          className="mt-16 text-center"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={viewportOnce}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        >
           <p className="text-slate-400 font-medium italic">
             Vous ne trouvez pas votre réponse ? N&apos;hésitez pas à nous appeler directement.
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
