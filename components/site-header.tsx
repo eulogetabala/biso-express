@@ -79,7 +79,7 @@ export function SiteHeader() {
               <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
                 Heures d&apos;ouverture
               </span>
-              <span>08h – 19h</span>
+              <span>08h – 22h</span>
             </span>
           </span>
         </div>
@@ -125,7 +125,7 @@ export function SiteHeader() {
                 <span className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
                   Heures d&apos;ouverture
                 </span>
-                <span>08h – 19h</span>
+                <span>08h – 22h</span>
               </span>
             </span>
           </nav>

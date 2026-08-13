@@ -9,7 +9,7 @@ const infos = [
     label: 'Téléphone',
     value: '05 021 03 03',
     href: 'tel:050210303',
-    hint: 'Lun – Sam · 8h – 18h',
+    hint: 'Lun – Sam · 8h – 22h',
   },
   {
     icon: Mail,
@@ -27,7 +27,7 @@ const infos = [
   {
     icon: Clock,
     label: 'Horaires',
-    value: 'Lundi – Samedi : 8h00 – 18h00',
+    value: 'Lundi – Samedi : 8h00 – 22h00',
     hint: 'Accueil sur rendez-vous',
   },
 ]
