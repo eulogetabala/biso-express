@@ -18,7 +18,7 @@ export const services: Service[] = [
     sector: 'Coursier & livraison',
     description:
       "La marque historique du groupe. Colis, documents et achats livrés en un temps record à travers Brazzaville, avec une flotte de coursiers suivie en temps réel.",
-    image: '/images/biso-express.png',
+    image: '/images/biso-express.jpeg',
     accent: 'accent',
     features: ['Suivi en direct', 'Livraison express', 'Coursiers vérifiés'],
     stat: { value: '45 min', label: 'délai moyen' },
