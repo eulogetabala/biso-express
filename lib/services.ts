@@ -77,7 +77,7 @@ export const services: Service[] = [
     tagline: 'Transportez tout',
     sector: 'Logistique & fret B2B',
     description:
-      "La branche B2B du groupe : transport de marchandises, stockage et distribution à l'échelle nationale pour les entreprises. Fiabilité garantie.",
+      "La branche B2B de Biso : transport de marchandises, stockage et distribution à l'échelle nationale pour les entreprises. Fiabilité garantie.",
     image: '/images/biso-logistics.png',
     accent: 'primary',
     features: ['Fret national', 'Stockage sécurisé', 'Solutions entreprises'],

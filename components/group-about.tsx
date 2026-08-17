@@ -4,7 +4,7 @@ const pillars = [
   {
     icon: Building2,
     title: 'Une structure, plusieurs marques',
-    text: "Biso n'est pas une application unique, mais un groupe qui fait naître et grandir des entreprises de services autonomes, chacune avec sa propre équipe et son expertise.",
+    text: "Biso n'est pas une application unique, mais une structure qui fait naître et grandir des entreprises de services autonomes, chacune avec sa propre équipe et son expertise.",
   },
   {
     icon: ShieldCheck,
@@ -30,7 +30,7 @@ export function GroupAbout() {
         <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
             <p className="mb-3 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-accent">
-              <span className="h-px w-8 bg-accent" /> Le groupe
+              <span className="h-px w-8 bg-accent" /> Biso Express
             </p>
             <h2 className="font-display text-4xl font-bold leading-tight tracking-tight text-balance sm:text-5xl">
               Biso Express, une structure,
@@ -55,7 +55,7 @@ export function GroupAbout() {
             <div className="overflow-hidden rounded-[2rem] border border-border shadow-xl shadow-primary/10">
               <img
                 src="/images/3.jpg"
-                alt="L'équipe et les équipes du groupe Biso au travail"
+                alt="L'équipe Biso Express au travail"
                 className="aspect-[4/3] w-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
@@ -69,7 +69,7 @@ export function GroupAbout() {
             </div>
             <div className="absolute -right-4 -top-6 rounded-2xl border border-border bg-card px-5 py-4 shadow-xl">
               <p className="font-display text-3xl font-bold text-primary">6 marques</p>
-              <p className="text-xs text-muted-foreground">un même groupe</p>
+              <p className="text-xs text-muted-foreground">une même structure</p>
             </div>
             <div className="absolute -bottom-10 -right-8 -z-10 size-40 overflow-hidden rounded-3xl border border-border">
               <img

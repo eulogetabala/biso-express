@@ -12,7 +12,7 @@ export default function GroupePage() {
       <SiteHeader />
       <main>
         <PageHero
-          eyebrow="Le groupe"
+          eyebrow="Biso Express"
           title={
             <>
               Une ambition collective,

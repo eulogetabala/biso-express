@@ -1,7 +1,7 @@
 import { Check, Clock, MapPin } from 'lucide-react'
 
 const activeCities = [
-  { name: 'Brazzaville', detail: 'Capitale · Siège du groupe' },
+  { name: 'Brazzaville', detail: 'Capitale · Siège de Biso Express' },
   { name: 'Pointe-Noire', detail: 'Capitale économique' },
 ]
 
@@ -34,7 +34,7 @@ export function CoverageGrid() {
             Aujourd&apos;hui à Brazzaville et Pointe-Noire
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-            Le groupe Biso a démarré à Brazzaville et s&apos;est étendu à
+            Biso Express a démarré à Brazzaville et s&apos;est étendu à
             Pointe-Noire. Le déploiement se poursuit progressivement vers
             d&apos;autres villes, porté par des partenaires locaux.
           </p>

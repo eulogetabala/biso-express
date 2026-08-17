@@ -14,7 +14,7 @@ const columns = [
     ],
   },
   {
-    title: 'Le groupe',
+    title: 'Biso Express',
     links: [
       { label: 'À propos', href: '/le-groupe' },
       { label: 'Notre vision', href: '/le-groupe' },
@@ -41,16 +41,16 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.5fr_2fr]">
           <div>
-            <Link href="/" className="flex items-center gap-2" aria-label="Groupe Biso">
+            <Link href="/" className="flex items-center gap-2" aria-label="Biso Express">
               <img
                 src="/images/biso-logo.png"
-                alt="Groupe Biso"
+                alt="Biso Express"
                 className="h-14 w-auto"
               />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              Le groupe congolais qui développe des marques de services
-              indépendantes au service du quotidien. Fièrement basé à Brazzaville. 🇨🇬
+              Biso Express, la structure congolaise qui développe et opère des
+              marques de services au service du quotidien. Fièrement basé à Brazzaville. 🇨🇬
             </p>
             <p className="mt-3 font-display text-sm font-semibold text-primary">
               Plus qu&apos;un service, une solution.
@@ -93,7 +93,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 text-sm text-muted-foreground sm:flex-row">
-          <p>© {new Date().getFullYear()} Groupe Biso. Tous droits réservés.</p>
+          <p>© {new Date().getFullYear()} Biso Express. Tous droits réservés.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-foreground">Confidentialité</a>
             <a href="#" className="hover:text-foreground">Conditions</a>

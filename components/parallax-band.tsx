@@ -96,7 +96,7 @@ export function ParallaxBand() {
                 href="#groupe"
                 className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-7 py-3.5 text-base font-semibold transition-colors hover:border-primary/40"
               >
-                Découvrir le groupe
+                Découvrir Biso Express
               </a>
             </div>
           </div>
@@ -111,7 +111,7 @@ export function ParallaxBand() {
               <img
                 ref={imgRef}
                 src="/images/9.jpg"
-                alt="Partenaires et collaborateurs du groupe Biso"
+                alt="Partenaires et collaborateurs de Biso Express"
                 className="absolute left-0 top-0 h-[130%] w-full object-cover will-change-transform"
                 style={{ transform: 'translate3d(0, 0, 0) scale(1.2)' }}
               />

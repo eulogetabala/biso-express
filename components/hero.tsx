@@ -25,7 +25,7 @@ const slides: Slide[] = [
       { text: ' c’est notre métier.', highlight: true, br: true },
     ],
     description:
-      'Biso Express est la structure congolaise à l’origine du groupe Biso. Une équipe, des coursiers, une promesse : livrer colis, documents, repas et courses en un temps record, à Brazzaville et bientôt partout au Congo.',
+      'Biso Express, la structure congolaise qui développe et opère des marques de services. Une équipe, des coursiers, une promesse : livrer colis, documents, repas et courses en un temps record, à Brazzaville et bientôt partout au Congo.',
     image: '/images/4.jpg',
   },
   {

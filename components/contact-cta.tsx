@@ -28,7 +28,7 @@ export function ContactCta() {
             </h2>
             <p className="mt-5 max-w-xl text-lg text-primary-foreground/80">
               Que vous soyez restaurateur, transporteur, commerçant ou entreprise,
-              le groupe Biso construit des partenariats durables partout au Congo.
+              Biso Express construit des partenariats durables partout au Congo.
               Parlons de la façon dont nos marques peuvent vous accompagner.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
@@ -36,7 +36,7 @@ export function ContactCta() {
                 href="mailto:direction@bisoexpress.com"
                 className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-base font-semibold text-accent-foreground transition-transform hover:scale-105"
               >
-                Écrire au groupe
+                Écrire à Biso Express
               </a>
               <a
                 href="#services"

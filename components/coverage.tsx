@@ -21,7 +21,7 @@ export function Coverage() {
           <div className="overflow-hidden rounded-[2rem] border border-border shadow-xl shadow-primary/10">
             <img
               src="/images/4.jpeg"
-              alt="Partenaires et collaborateurs du groupe Biso"
+              alt="Partenaires et collaborateurs de Biso Express"
               className="aspect-[4/5] w-full object-cover transition-transform duration-700 hover:scale-105"
             />
           </div>

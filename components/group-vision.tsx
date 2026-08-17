@@ -35,7 +35,7 @@ export function GroupVision() {
             <span className="h-px w-8 bg-accent" /> Notre vision
           </p>
           <h2 className="font-display text-4xl font-bold leading-tight tracking-tight text-balance sm:text-5xl">
-            Un groupe tourné vers l&apos;avenir du Congo
+            Une structure tournée vers l&apos;avenir du Congo
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
             Nous construisons, un service à la fois, un écosystème où les Congolais

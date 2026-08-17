@@ -4,7 +4,7 @@ const values = [
   {
     icon: Building2,
     title: 'Une structure, plusieurs marques',
-    text: "Biso n'est pas une application unique, mais un groupe qui fait naître et grandir des entreprises de services autonomes, chacune avec sa propre équipe et son expertise.",
+    text: "Biso n'est pas une application unique, mais une structure qui fait naître et grandir des entreprises de services autonomes, chacune avec sa propre équipe et son expertise.",
   },
   {
     icon: ShieldCheck,
