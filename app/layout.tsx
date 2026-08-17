@@ -19,7 +19,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: 'Groupe Biso — Plus qu\'un service, une solution | Brazzaville, Congo',
   description:
-    "Le Groupe Biso développe et opère des marques de services indépendantes à Brazzaville : Biso Express, Biso Taxi, Biso Food, Biso Market et Biso Logistics.",
+    "Le groupe Biso développe et opère des marques de services à Brazzaville : Biso Livraison, Biso Taxi, Biso Food, Biso Market, Biso Pharma et Biso Logistics.",
   generator: 'v0.app',
 }
 

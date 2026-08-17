@@ -5,10 +5,11 @@ const columns = [
   {
     title: 'Nos marques',
     links: [
-      { label: 'Biso Express', href: '/nos-marques' },
+      { label: 'Biso Livraison', href: '/nos-marques' },
       { label: 'Biso Taxi', href: '/nos-marques' },
       { label: 'Biso Food', href: '/nos-marques' },
       { label: 'Biso Market', href: '/nos-marques' },
+      { label: 'Biso Pharma', href: '/nos-marques' },
       { label: 'Biso Logistics', href: '/nos-marques' },
     ],
   },

@@ -14,7 +14,7 @@ export default function MarquesPage() {
           eyebrow="Nos marques"
           title={
             <>
-              Cinq métiers,
+              Six métiers,
               <br />
               <span className="bg-gradient-to-r from-accent via-orange-300 to-accent bg-clip-text text-transparent">
                 une même exigence.

@@ -7,7 +7,7 @@ type Stat = { value: number; suffix: string; label: string; icon: typeof Users }
 
 const stats: Stat[] = [
   { value: 100, suffix: '', label: 'Clients accompagnés', icon: Users },
-  { value: 5, suffix: '', label: 'Marques du groupe', icon: Building2 },
+  { value: 6, suffix: '', label: 'Marques du groupe', icon: Building2 },
   { value: 50, suffix: '+', label: 'Partenaires & prestataires', icon: Handshake },
   { value: 12, suffix: '', label: 'Départements visés', icon: MapPin },
 ]

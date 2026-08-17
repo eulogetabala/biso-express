@@ -33,14 +33,14 @@ export function GroupAbout() {
               <span className="h-px w-8 bg-accent" /> Le groupe
             </p>
             <h2 className="font-display text-4xl font-bold leading-tight tracking-tight text-balance sm:text-5xl">
-              Un groupe congolais, plusieurs solutions du quotidien
+              Biso Express, une structure,
+              <br className="hidden sm:block" /> plusieurs solutions du quotidien
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              Né avec <strong className="font-semibold text-foreground">Biso Express</strong>, le
-              groupe Biso s&apos;est construit autour d&apos;une conviction simple :
-              chaque besoin mérite un service dédié, mené par des équipes qui le
-              maîtrisent. Aujourd&apos;hui, cinq marques indépendantes portent
-              cette même ambition à travers Brazzaville et au-delà.
+              Tout est parti d&apos;une promesse simple&nbsp;: livrer vite et bien.
+              De cette conviction, la structure Biso a fait naître six marques,
+              chacune experte dans son métier, unies par la même exigence de
+              fiabilité et de qualité à travers Brazzaville.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
               Notre devise résume tout&nbsp;:{' '}
@@ -68,7 +68,7 @@ export function GroupAbout() {
               />
             </div>
             <div className="absolute -right-4 -top-6 rounded-2xl border border-border bg-card px-5 py-4 shadow-xl">
-              <p className="font-display text-3xl font-bold text-primary">5 marques</p>
+              <p className="font-display text-3xl font-bold text-primary">6 marques</p>
               <p className="text-xs text-muted-foreground">un même groupe</p>
             </div>
             <div className="absolute -bottom-10 -right-8 -z-10 size-40 overflow-hidden rounded-3xl border border-border">

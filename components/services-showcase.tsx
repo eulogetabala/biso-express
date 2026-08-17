@@ -27,7 +27,7 @@ export function ServicesShowcase() {
             <span className="h-px w-8 bg-accent" /> Nos marques
           </p>
           <h2 className="font-display text-4xl font-bold tracking-tight text-balance sm:text-5xl">
-            Cinq marques indépendantes, un même groupe
+            Six marques indépendantes, un même groupe
           </h2>
         </div>
         <p className="max-w-sm text-muted-foreground">

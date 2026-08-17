@@ -8,9 +8,9 @@ const reviews = [
   {
     name: 'Grâce Ngoma',
     role: 'Entrepreneure, Poto-Poto',
-    brand: 'Biso Express',
+    brand: 'Biso Livraison',
     brandClass: 'bg-accent/15 text-accent',
-    text: "Avec Biso Express je livre mes clientes en moins d'une heure. Mon business a doublé depuis que je travaille avec eux.",
+    text: "Avec Biso Livraison je livre mes clientes en moins d'une heure. Mon business a doublé depuis que je travaille avec eux.",
     initials: 'GN',
   },
   {

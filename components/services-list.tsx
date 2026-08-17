@@ -23,6 +23,8 @@ const descriptions: Record<string, string> = {
     "Les saveurs de Brazzaville livrées bien chaudes. Des ngandas aux restaurants les plus appréciés, nous sélectionnons des partenaires passionnés et livrons vos plats à domicile.",
   market:
     "Les produits frais du marché, sans quitter la maison. Fruits, légumes, épicerie et essentiels du quotidien, sourcés auprès des vendeurs locaux et livrés chez vous.",
+  pharma:
+    "Vos médicaments sans vous déplacer. Pour les personnes en situation difficile ou très occupées, nous faisons les courses en pharmacie et livrons prescriptions et produits de santé rapidement, en toute discrétion.",
   logistics:
     "Le partenaire logistique des entreprises congolaises. Transport de marchandises, entreposage sécurisé et distribution à l'échelle nationale, avec un suivi fiable de bout en bout.",
 }
@@ -35,7 +37,7 @@ export function ServicesList() {
           <span className="h-px w-8 bg-accent" /> L’écosystème
         </p>
         <h2 className="font-display text-4xl font-bold tracking-tight text-balance sm:text-5xl">
-          Cinq métiers complémentaires, une même promesse
+          Six métiers complémentaires, une même promesse
         </h2>
         <p className="mt-5 text-lg text-muted-foreground">
           Chaque entité Biso opère de façon autonome avec sa propre équipe —

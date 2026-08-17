@@ -19,19 +19,19 @@ type Slide = { eyebrow: string; title: TitlePart[]; description: string; image: 
  */
 const slides: Slide[] = [
   {
-    eyebrow: 'Le groupe',
+    eyebrow: 'Biso Express',
     title: [
-      { text: 'Plus qu’un service,' },
-      { text: ' une solution.', highlight: true, br: true },
+      { text: 'On livre vite,' },
+      { text: ' c’est notre métier.', highlight: true, br: true },
     ],
     description:
-      'Groupe Biso est une structure congolaise qui développe et opère des marques de services indépendantes, unies par une même exigence de fiabilité et de qualité au service du quotidien.',
+      'Biso Express est la structure congolaise à l’origine du groupe Biso. Une équipe, des coursiers, une promesse : livrer colis, documents, repas et courses en un temps record, à Brazzaville et bientôt partout au Congo.',
     image: '/images/4.jpg',
   },
   {
     eyebrow: 'Notre expertise',
     title: [
-      { text: 'Cinq métiers' },
+      { text: 'Six métiers' },
       { text: ' maîtrisés', highlight: true },
       { text: ',', br: true },
       { text: ' par des équipes dédiées.' },
@@ -48,7 +48,7 @@ const slides: Slide[] = [
       { text: ' l’économie locale.', br: true },
     ],
     description:
-      'Coursiers, chauffeurs, restaurateurs, vendeurs de marché : le groupe Biso crée des opportunités et accompagne des centaines de partenaires congolais au quotidien.',
+      'Coursiers, chauffeurs, restaurateurs, vendeurs de marché : Biso crée des opportunités et accompagne des centaines de partenaires congolais au quotidien.',
     image: '/images/1.jpg',
   },
 ]
@@ -170,7 +170,7 @@ export function Hero() {
               href="#groupe"
               className="group inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-base font-bold text-accent-foreground shadow-lg shadow-accent/30 transition-transform hover:scale-105"
             >
-              Découvrir le groupe
+              Découvrir Biso Express
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
@@ -218,7 +218,7 @@ export function Hero() {
               <path id="hero-circle" d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" />
             </defs>
             <text className="fill-white/70" style={{ fontSize: 9, letterSpacing: 2 }}>
-              <textPath href="#hero-circle">GROUPE BISO · BRAZZAVILLE · CONGO · GROUPE BISO ·</textPath>
+              <textPath href="#hero-circle">BISO EXPRESS · BRAZZAVILLE · CONGO · BISO EXPRESS ·</textPath>
             </text>
           </svg>
           <span className="flex size-14 items-center justify-center rounded-full border border-white/25 bg-white/10 backdrop-blur">

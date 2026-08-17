@@ -13,11 +13,11 @@ export type Service = {
 export const services: Service[] = [
   {
     id: 'express',
-    name: 'Biso Express',
+    name: 'Biso Livraison',
     tagline: 'Livraison éclair',
     sector: 'Coursier & livraison',
     description:
-      "La marque historique du groupe. Colis, documents et achats livrés en un temps record à travers Brazzaville, avec une flotte de coursiers suivie en temps réel.",
+      "Le service historique de Biso. Colis, documents et achats livrés en un temps record à travers Brazzaville, avec une flotte de coursiers suivie en temps réel.",
     image: '/images/biso-express.jpeg',
     accent: 'accent',
     features: ['Suivi en direct', 'Livraison express', 'Coursiers vérifiés'],
@@ -58,6 +58,18 @@ export const services: Service[] = [
     accent: 'secondary',
     features: ['Produits frais du jour', 'Vendeurs locaux', 'Livraison programmée'],
     stat: { value: '10k+', label: 'produits' },
+  },
+  {
+    id: 'pharma',
+    name: 'Biso Pharma',
+    tagline: 'Votre pharmacie livrée',
+    sector: 'Santé & pharmacie',
+    description:
+      "Médicaments et produits de santé livrés chez vous en toute discrétion. Pour les personnes en situation difficile ou très occupées, Biso se charge de faire les courses en pharmacie et de les livrer rapidement.",
+    image: '/images/biso-pharma.png',
+    accent: 'secondary',
+    features: ['Pharmacies partenaires', 'Ordonnances gérées', 'Livraison discrète'],
+    stat: { value: '30 min', label: 'délai moyen' },
   },
   {
     id: 'logistics',
