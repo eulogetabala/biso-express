@@ -1,7 +1,7 @@
 import { Mail, MapPin, Phone } from 'lucide-react'
 
 const contacts = [
-  { icon: Phone, label: 'Téléphone', value: '05 021 03 03' },
+  { icon: Phone, label: 'Téléphone', value: '+242 05 021 03 03 / 06 763 48 48' },
   { icon: Mail, label: 'E-mail', value: 'direction@bisoexpress.com' },
   { icon: MapPin, label: 'Siège', value: '1302 Avenue de la base Batignolles, Brazzaville' },
 ]

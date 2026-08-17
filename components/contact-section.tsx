@@ -7,8 +7,10 @@ const infos = [
   {
     icon: Phone,
     label: 'Téléphone',
-    value: '05 021 03 03',
-    href: 'tel:050210303',
+    numbers: [
+      { value: '+242 05 021 03 03', href: 'tel:+242050210303' },
+      { value: '06 763 48 48', href: 'tel:067634848' },
+    ],
     hint: 'Lun – Sam · 8h – 22h',
   },
   {
@@ -81,7 +83,21 @@ export function ContactSection() {
                   <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
                     {info.label}
                   </p>
-                  {info.href ? (
+                  {info.numbers ? (
+                    <p className="mt-0.5 font-display text-lg font-bold leading-snug">
+                      {info.numbers.map((n, i) => (
+                        <span key={n.value}>
+                          {i > 0 && ' / '}
+                          <a
+                            href={n.href}
+                            className="text-foreground transition-colors hover:text-primary"
+                          >
+                            {n.value}
+                          </a>
+                        </span>
+                      ))}
+                    </p>
+                  ) : info.href ? (
                     <a
                       href={info.href}
                       className="mt-0.5 block font-display text-lg font-bold text-foreground transition-colors hover:text-primary"
