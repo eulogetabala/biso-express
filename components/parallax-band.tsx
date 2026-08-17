@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import { ArrowRight, Handshake, MapPin, Sparkles, Users } from 'lucide-react'
+import { ArrowRight, Handshake, HeartHandshake, MapPin, Users } from 'lucide-react'
 
 const highlights = [
   { icon: Users, value: '100', label: 'clients accompagnés' },
@@ -121,7 +121,7 @@ export function ParallaxBand() {
             {/* Floating badge */}
             <div className="absolute -bottom-6 left-6 flex items-center gap-3 rounded-2xl border border-border bg-card px-5 py-4 shadow-xl">
               <span className="flex size-11 items-center justify-center rounded-xl bg-accent/15 text-accent">
-                <Sparkles className="size-5" />
+                <HeartHandshake className="size-5" />
               </span>
               <div>
                 <p className="font-display text-lg font-bold leading-none">100% local</p>
