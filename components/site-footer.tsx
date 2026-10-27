@@ -45,7 +45,7 @@ export function SiteFooter() {
               <img
                 src="/images/biso-logo.png"
                 alt="Biso Express"
-                className="h-14 w-auto"
+                className="h-20 w-auto"
               />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">

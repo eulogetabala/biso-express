@@ -42,7 +42,7 @@ export function SiteHeader() {
           <img
             src="/images/biso-logo.png"
             alt="Biso Express"
-            className="h-[88px] w-auto rounded-lg bg-white p-1"
+            className="h-[115px] w-auto rounded-lg bg-white p-1"
           />
         </Link>
 
