@@ -43,9 +43,9 @@ export function SiteFooter() {
           <div>
             <Link href="/" className="flex items-center gap-2" aria-label="Biso Express">
               <img
-                src="/images/biso-logo.png"
+                src="/images/biso.jpg"
                 alt="Biso Express"
-                className="h-20 w-auto"
+                className="h-20 w-auto rounded-lg bg-white object-contain"
               />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">

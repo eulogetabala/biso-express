@@ -12,10 +12,10 @@ export function PageHero({
   image: string
 }) {
   return (
-    <section className="relative flex min-h-[55vh] items-end overflow-hidden bg-primary pb-16 pt-32">
+    <section className="relative flex min-h-[55vh] items-end overflow-hidden bg-secondary pb-16 pt-32">
       <img src={image} alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover" />
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/75 to-primary/25" />
-      <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/30 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/75 to-secondary/25" />
+      <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/30 to-transparent" />
 
       <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl text-white">

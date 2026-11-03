@@ -25,14 +25,14 @@ const values = [
 
 export function GroupValues() {
   return (
-    <section className="relative overflow-hidden bg-primary py-24 text-primary-foreground">
+    <section className="relative overflow-hidden bg-secondary py-24 text-secondary-foreground">
       <img
         src="/images/wax-pattern.png"
         alt=""
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.06] mix-blend-overlay"
       />
-      <div className="pointer-events-none absolute -left-32 top-1/3 size-96 rounded-full bg-secondary/20 blur-3xl" />
+      <div className="pointer-events-none absolute -left-32 top-1/3 size-96 rounded-full bg-primary/20 blur-3xl" />
       <div className="pointer-events-none absolute -right-24 bottom-0 size-96 rounded-full bg-accent/15 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -43,7 +43,7 @@ export function GroupValues() {
           <h2 className="font-display text-4xl font-bold leading-tight tracking-tight text-balance sm:text-5xl">
             Ce qui nous relie, au-delà des marques
           </h2>
-          <p className="mt-5 text-lg leading-relaxed text-primary-foreground/80">
+          <p className="mt-5 text-lg leading-relaxed text-secondary-foreground/80">
             Quatre principes guident chacune de nos décisions, de la première
             course du matin à la livraison la plus lourde.
           </p>
@@ -64,7 +64,7 @@ export function GroupValues() {
                 </span>
                 <h3 className="font-display text-xl font-bold sm:text-2xl">{v.title}</h3>
               </div>
-              <p className="text-primary-foreground/75 lg:pl-4">{v.text}</p>
+              <p className="text-secondary-foreground/75 lg:pl-4">{v.text}</p>
             </div>
           ))}
         </div>

@@ -56,7 +56,7 @@ export function CoverageGrid() {
             {activeCities.map((c) => (
               <div
                 key={c.name}
-                className="group relative overflow-hidden rounded-[2rem] border border-primary/25 bg-gradient-to-br from-primary to-[#0d1745] p-7 text-primary-foreground shadow-xl shadow-primary/15 transition-all duration-300 hover:-translate-y-1"
+                className="group relative overflow-hidden rounded-[2rem] border border-secondary/25 bg-gradient-to-br from-secondary to-[#0d1745] p-7 text-secondary-foreground shadow-xl shadow-secondary/15 transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="pointer-events-none absolute -right-6 -top-6 size-24 rounded-full bg-accent/20 blur-2xl" />
                 <div className="flex items-start justify-between">
@@ -68,7 +68,7 @@ export function CoverageGrid() {
                   </span>
                 </div>
                 <h3 className="mt-5 font-display text-2xl font-bold">{c.name}</h3>
-                <p className="mt-1 text-sm text-primary-foreground/75">{c.detail}</p>
+                <p className="mt-1 text-sm text-secondary-foreground/75">{c.detail}</p>
               </div>
             ))}
           </div>

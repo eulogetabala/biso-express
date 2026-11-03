@@ -128,7 +128,7 @@ export function Testimonials() {
                       “{r.text}”
                     </p>
                     <footer className="mt-8 flex items-center justify-center gap-4">
-                      <span className="flex size-12 items-center justify-center rounded-full bg-gradient-to-br from-primary to-secondary font-display font-bold text-primary-foreground ring-2 ring-accent/60 ring-offset-2 ring-offset-card">
+                      <span className="flex size-12 items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent font-display font-bold text-primary-foreground ring-2 ring-accent/60 ring-offset-2 ring-offset-card">
                         {r.initials}
                       </span>
                       <div className="text-left">

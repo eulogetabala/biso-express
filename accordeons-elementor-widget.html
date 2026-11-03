@@ -1,0 +1,678 @@
+<style>
+/* Snippet accordéons Elementor BGFI - à coller dans un widget HTML Elementor */
+.elementor-element-7105bce {
+  --e-global-color-d51e343: #12bcbd;
+  --e-global-color-de26589: #ffffff;
+  --e-global-color-8359b9f: #0098b1;
+  --e-global-color-c19d0b6: #005196;
+  --e-global-color-649e4d0: #212529;
+  --n-accordion-title-font-size: 23px;
+  --n-accordion-title-normal-color: var(--e-global-color-d51e343);
+  --n-accordion-title-hover-color: var(--e-global-color-8359b9f);
+  --n-accordion-title-active-color: var(--e-global-color-d51e343);
+  --n-accordion-icon-size: 15px;
+  width: 100%;
+  color: var(--e-global-color-649e4d0);
+  font-family: "Roboto", "Plus Jakarta Sans", Arial, sans-serif;
+}
+
+.elementor-element-7105bce .e-n-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.elementor-element-7105bce .e-n-accordion-item {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.elementor-element-7105bce .e-n-accordion-item-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  cursor: pointer;
+  list-style: none;
+  color: var(--n-accordion-title-normal-color);
+  background-color: var(--e-global-color-de26589);
+  border: 1px solid var(--e-global-color-d51e343);
+  margin: 0;
+}
+
+.elementor-element-7105bce .e-n-accordion-item-title:hover {
+  color: var(--n-accordion-title-hover-color);
+}
+
+.elementor-element-7105bce .e-n-accordion-item[open] > .e-n-accordion-item-title {
+  color: var(--n-accordion-title-active-color);
+}
+
+.elementor-element-7105bce .e-n-accordion-item-title::-webkit-details-marker {
+  display: none;
+}
+
+.elementor-element-7105bce .e-n-accordion-item-title-header {
+  display: flex;
+  flex-grow: 1;
+}
+
+.elementor-element-7105bce .e-n-accordion-item-title-text {
+  font-family: "Plus Jakarta Sans", "Roboto", Arial, sans-serif;
+  font-size: var(--n-accordion-title-font-size);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.elementor-element-7105bce .e-n-accordion-item-title-icon {
+  display: flex;
+  align-items: center;
+  color: var(--e-global-color-d51e343);
+}
+
+.elementor-element-7105bce .e-n-accordion-item-title-icon span {
+  width: auto;
+  height: var(--n-accordion-icon-size);
+  align-items: center;
+}
+
+.elementor-element-7105bce .e-n-accordion-item-title-icon i {
+  font-size: var(--n-accordion-icon-size);
+  line-height: 1;
+}
+
+.elementor-element-7105bce .e-n-accordion-item:not([open]) .e-con {
+  display: none;
+}
+
+.elementor-element-7105bce .e-n-accordion-item[open] .e-opened,
+.elementor-element-7105bce .e-n-accordion-item:not([open]) .e-closed {
+  display: flex;
+}
+
+.elementor-element-7105bce .e-n-accordion-item:not([open]) .e-opened,
+.elementor-element-7105bce .e-n-accordion-item[open] .e-closed {
+  display: none;
+}
+
+.elementor-element-7105bce .e-n-accordion-item > .e-con {
+  background-color: var(--e-global-color-de26589);
+  border: 1px solid var(--e-global-color-d51e343);
+  border-top: 0;
+  padding: 23px;
+}
+
+.elementor-element-7105bce .e-n-accordion-item > .e-con,
+.elementor-element-7105bce .e-n-accordion-item > .e-con > .e-con {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.elementor-element-7105bce .e-n-accordion-item > .e-con > .e-con {
+  padding: 0;
+}
+
+.elementor-element-7105bce .e-n-accordion-item .e-con .e-con {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.elementor-element-7105bce .elementor-widget-text-editor {
+  color: #212529;
+}
+
+.elementor-element-7105bce .elementor-widget-text-editor p {
+  margin: 0;
+}
+
+.elementor-element-7105bce .elementor-widget-text-editor strong {
+  font-weight: 700;
+}
+
+.elementor-element-7105bce .elementor-icon-list-items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.elementor-element-7105bce .elementor-icon-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #000000;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.elementor-element-7105bce .elementor-icon-list-item:not(:last-child) {
+  padding-bottom: 1px;
+}
+
+.elementor-element-7105bce .elementor-icon-list-item:not(:first-child) {
+  margin-top: 1px;
+}
+
+.elementor-element-7105bce .elementor-icon-list-item a {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.elementor-element-7105bce .elementor-icon-list-icon {
+  padding-inline-end: 4px;
+  color: var(--e-global-color-d51e343);
+  line-height: 1;
+  transform: translateY(3px);
+}
+
+.elementor-element-7105bce .elementor-icon-list-icon i {
+  color: var(--e-global-color-d51e343);
+  font-size: 10px;
+}
+
+.elementor-element-7105bce .elementor-element-89bf6f9 > .elementor-widget-container,
+.elementor-element-7105bce .elementor-element-ead70e4 > .elementor-widget-container,
+.elementor-element-7105bce .elementor-element-3f627da > .elementor-widget-container,
+.elementor-element-7105bce .elementor-element-f889296 > .elementor-widget-container,
+.elementor-element-7105bce .elementor-element-c923dd8 > .elementor-widget-container,
+.elementor-element-7105bce .elementor-element-4c01a79 > .elementor-widget-container {
+  background-color: rgba(18, 188, 189, 0.35);
+  padding: 23px;
+  border: 1px solid var(--e-global-color-d51e343);
+  border-radius: 9px;
+}
+
+.elementor-element-7105bce .elementor-element-89bf6f9 .elementor-icon-list-icon i,
+.elementor-element-7105bce .elementor-element-ead70e4 .elementor-icon-list-icon i,
+.elementor-element-7105bce .elementor-element-3f627da .elementor-icon-list-icon i,
+.elementor-element-7105bce .elementor-element-f889296 .elementor-icon-list-icon i,
+.elementor-element-7105bce .elementor-element-c923dd8 .elementor-icon-list-icon i,
+.elementor-element-7105bce .elementor-element-4c01a79 .elementor-icon-list-icon i {
+  color: var(--e-global-color-de26589);
+  font-size: 22px;
+}
+
+.elementor-element-7105bce .elementor-element-89bf6f9 .elementor-icon-list-item:hover .elementor-icon-list-text,
+.elementor-element-7105bce .elementor-element-ead70e4 .elementor-icon-list-item:hover .elementor-icon-list-text,
+.elementor-element-7105bce .elementor-element-3f627da .elementor-icon-list-item:hover .elementor-icon-list-text,
+.elementor-element-7105bce .elementor-element-f889296 .elementor-icon-list-item:hover .elementor-icon-list-text,
+.elementor-element-7105bce .elementor-element-c923dd8 .elementor-icon-list-item:hover .elementor-icon-list-text,
+.elementor-element-7105bce .elementor-element-4c01a79 .elementor-icon-list-item:hover .elementor-icon-list-text {
+  color: var(--e-global-color-c19d0b6);
+}
+
+.elementor-element-7105bce .elementor-element-2c72242 > .elementor-widget-container,
+.elementor-element-7105bce .elementor-element-7eec6b9 > .elementor-widget-container,
+.elementor-element-7105bce .elementor-element-8027ab5 > .elementor-widget-container,
+.elementor-element-7105bce .elementor-element-3bcf96b > .elementor-widget-container,
+.elementor-element-7105bce .elementor-element-6f273dc > .elementor-widget-container,
+.elementor-element-7105bce .elementor-element-e0cb4ed > .elementor-widget-container {
+  margin: -13px 0 0;
+}
+
+.elementor-element-7105bce .elementor-element-e0cb4ed .elementor-icon-list-item:not(:last-child) {
+  padding-bottom: 7.5px;
+}
+
+.elementor-element-7105bce .elementor-element-e0cb4ed .elementor-icon-list-item:not(:first-child) {
+  margin-top: 7.5px;
+}
+
+@media (max-width: 767px) {
+  .elementor-element-7105bce .e-n-accordion-item > .e-con,
+  .elementor-element-7105bce .e-n-accordion-item > .e-con > .e-con {
+    flex-direction: column;
+  }
+
+  .elementor-element-7105bce .e-n-accordion-item-title-text {
+    font-size: 20px;
+  }
+}
+</style>
+
+<div class="elementor-element elementor-element-7105bce elementor-widget elementor-widget-n-accordion" data-id="7105bce" data-element_type="widget" data-e-type="widget" data-settings="{&quot;default_state&quot;:&quot;expanded&quot;,&quot;max_items_expended&quot;:&quot;one&quot;,&quot;n_accordion_animation_duration&quot;:{&quot;unit&quot;:&quot;ms&quot;,&quot;size&quot;:400,&quot;sizes&quot;:[]}}" data-widget_type="nested-accordion.default">
+				<div class="elementor-widget-container">
+							<div class="e-n-accordion" aria-label="Accordion. Open links with Enter or Space, close with Escape, and navigate with Arrow Keys">
+						<details id="e-n-accordion-item-1180" class="e-n-accordion-item" style="">
+				<summary class="e-n-accordion-item-title" data-accordion-index="1" tabindex="0" aria-expanded="false" aria-controls="e-n-accordion-item-1180">
+					<span class="e-n-accordion-item-title-header"><div class="e-n-accordion-item-title-text"> Protéger sa carte bancaire au quotidien </div></span>
+							<span class="e-n-accordion-item-title-icon">
+			<span class="e-opened"><i aria-hidden="true" class="fas fa-chevron-up"></i></span>
+			<span class="e-closed"><i aria-hidden="true" class="fas fa-chevron-down"></i></span>
+		</span>
+
+						</summary>
+				<div role="region" aria-labelledby="e-n-accordion-item-1180" class="elementor-element elementor-element-aefc792 e-con-full e-flex e-con e-child" data-id="aefc792" data-element_type="container" data-e-type="container">
+		<div role="region" aria-labelledby="e-n-accordion-item-1180" class="elementor-element elementor-element-686c2ad e-con-full e-flex e-con e-child" data-id="686c2ad" data-element_type="container" data-e-type="container">
+		<div role="region" aria-labelledby="e-n-accordion-item-1180" class="elementor-element elementor-element-269891b e-con-full e-flex e-con e-child" data-id="269891b" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-aff0e4e elementor-widget elementor-widget-text-editor" data-id="aff0e4e" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<strong>À faire dès la réception de votre carte :</strong>								</div>
+				</div>
+				<div class="elementor-element elementor-element-2c72242 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="2c72242" data-element_type="widget" data-e-type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+							<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-circle"></i>						</span>
+										<span class="elementor-icon-list-text">Conserver votre carte dans un endroit sûr</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-circle"></i>						</span>
+										<span class="elementor-icon-list-text">Toujours savoir où se trouve votre carte</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-circle"></i>						</span>
+										<span class="elementor-icon-list-text">Ne jamais la confier à un tiers, même à un proche</span>
+									</li>
+						</ul>
+						</div>
+				</div>
+				</div>
+		<div role="region" aria-labelledby="e-n-accordion-item-1180" class="elementor-element elementor-element-a7d0567 e-con-full e-flex e-con e-child" data-id="a7d0567" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-89bf6f9 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="89bf6f9" data-element_type="widget" data-e-type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+							<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<a href="https://bgfi.jbb.cg/accueil-bgfibank-congo/nos-cartes-visa/">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fab fa-cc-visa"></i>						</span>
+										<span class="elementor-icon-list-text">Découvrez les Cartes Visa BGFI</span>
+											</a>
+									</li>
+						</ul>
+						</div>
+				</div>
+				</div>
+				</div>
+				</div>
+					</details>
+						<details id="e-n-accordion-item-1181" class="e-n-accordion-item" style="">
+				<summary class="e-n-accordion-item-title" data-accordion-index="2" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-1181">
+					<span class="e-n-accordion-item-title-header"><div class="e-n-accordion-item-title-text">  Le code secret : un élément strictement personnel </div></span>
+							<span class="e-n-accordion-item-title-icon">
+			<span class="e-opened"><i aria-hidden="true" class="fas fa-chevron-up"></i></span>
+			<span class="e-closed"><i aria-hidden="true" class="fas fa-chevron-down"></i></span>
+		</span>
+
+						</summary>
+				<div role="region" aria-labelledby="e-n-accordion-item-1181" class="elementor-element elementor-element-b27fd54 e-con-full e-flex e-con e-child" data-id="b27fd54" data-element_type="container" data-e-type="container">
+		<div role="region" aria-labelledby="e-n-accordion-item-1181" class="elementor-element elementor-element-c7537ab e-con-full e-flex e-con e-child" data-id="c7537ab" data-element_type="container" data-e-type="container">
+		<div role="region" aria-labelledby="e-n-accordion-item-1181" class="elementor-element elementor-element-bbdc1f6 e-con-full e-flex e-con e-child" data-id="bbdc1f6" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-1e94d1e elementor-widget elementor-widget-text-editor" data-id="1e94d1e" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<strong>Bonnes pratiques :</strong>								</div>
+				</div>
+				<div class="elementor-element elementor-element-7eec6b9 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="7eec6b9" data-element_type="widget" data-e-type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+							<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-circle"></i>						</span>
+										<span class="elementor-icon-list-text">Composer votre code à l’abri des regards;</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-circle"></i>						</span>
+										<span class="elementor-icon-list-text">Masquer le clavier lors de la saisie;</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-circle"></i>						</span>
+										<span class="elementor-icon-list-text">Ne jamais noter ou mémoriser le code sur un support accessible;</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-circle"></i>						</span>
+										<span class="elementor-icon-list-text">Ne jamais communiquer votre code, sous aucun prétexte;</span>
+									</li>
+						</ul>
+						</div>
+				</div>
+				</div>
+		<div role="region" aria-labelledby="e-n-accordion-item-1181" class="elementor-element elementor-element-596cee7 e-con-full e-flex e-con e-child" data-id="596cee7" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-ead70e4 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="ead70e4" data-element_type="widget" data-e-type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+							<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<a href="https://bgfi.jbb.cg/accueil-bgfibank-congo/nos-cartes-visa/">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-shield-alt"></i>						</span>
+										<span class="elementor-icon-list-text"><strong>Astuce sécurité</strong></span></a></li><li class="elementor-icon-list-item">
+											<a href="https://bgfi.jbb.cg/accueil-bgfibank-congo/nos-cartes-visa/">
+
+											<span class="elementor-icon-list-text">Votre banque ne vous demandera jamais votre code</span>
+											</a>
+									</li></ul></div></div></div></div></div></details><details id="e-n-accordion-item-1182" class="e-n-accordion-item" style="">
+				<summary class="e-n-accordion-item-title" data-accordion-index="3" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-1182">
+					<span class="e-n-accordion-item-title-header"><div class="e-n-accordion-item-title-text"> Les informations figurant sur la carte </div></span>
+							<span class="e-n-accordion-item-title-icon">
+			<span class="e-opened"><i aria-hidden="true" class="fas fa-chevron-up"></i></span>
+			<span class="e-closed"><i aria-hidden="true" class="fas fa-chevron-down"></i></span>
+		</span>
+
+						</summary>
+				<div role="region" aria-labelledby="e-n-accordion-item-1182" class="elementor-element elementor-element-6f984a4 e-con-full e-flex e-con e-child" data-id="6f984a4" data-element_type="container" data-e-type="container">
+		<div role="region" aria-labelledby="e-n-accordion-item-1182" class="elementor-element elementor-element-7b612ac e-con-full e-flex e-con e-child" data-id="7b612ac" data-element_type="container" data-e-type="container">
+		<div role="region" aria-labelledby="e-n-accordion-item-1182" class="elementor-element elementor-element-f2315ea e-con-full e-flex e-con e-child" data-id="f2315ea" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-543bf91 elementor-widget elementor-widget-text-editor" data-id="543bf91" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p><strong>Informations confidentielles :</strong></p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-8027ab5 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="8027ab5" data-element_type="widget" data-e-type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+							<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-circle"></i>						</span>
+										<span class="elementor-icon-list-text">Numéro de carte (16 chiffres)</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-circle"></i>						</span>
+										<span class="elementor-icon-list-text">Date d’expiration</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-circle"></i>						</span>
+										<span class="elementor-icon-list-text">Cryptogramme visuel (3 chiffres au verso)</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-circle"></i>						</span>
+										<span class="elementor-icon-list-text">Nom et prénom du titulaire</span>
+									</li>
+						</ul>
+						</div>
+				</div>
+				</div>
+		<div role="region" aria-labelledby="e-n-accordion-item-1182" class="elementor-element elementor-element-da0da36 e-con-full e-flex e-con e-child" data-id="da0da36" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-3f627da elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="3f627da" data-element_type="widget" data-e-type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+							<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<a href="https://bgfi.jbb.cg/accueil-bgfibank-congo/nos-cartes-visa/">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-shield-alt"></i>						</span>
+										<span class="elementor-icon-list-text">Ces informations ne doivent jamais être communiquées à un tiers.</span>
+											</a>
+									</li>
+						</ul>
+						</div>
+				</div>
+				</div>
+				</div>
+				</div>
+					</details>
+						<details id="e-n-accordion-item-1183" class="e-n-accordion-item" style="">
+				<summary class="e-n-accordion-item-title" data-accordion-index="4" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-1183">
+					<span class="e-n-accordion-item-title-header"><div class="e-n-accordion-item-title-text"> Paiement sans contact : ce qu’il faut savoir </div></span>
+							<span class="e-n-accordion-item-title-icon">
+			<span class="e-opened"><i aria-hidden="true" class="fas fa-chevron-up"></i></span>
+			<span class="e-closed"><i aria-hidden="true" class="fas fa-chevron-down"></i></span>
+		</span>
+
+						</summary>
+				<div role="region" aria-labelledby="e-n-accordion-item-1183" class="elementor-element elementor-element-a562480 e-con-full e-flex e-con e-child" data-id="a562480" data-element_type="container" data-e-type="container">
+		<div role="region" aria-labelledby="e-n-accordion-item-1183" class="elementor-element elementor-element-216e1ec e-con-full e-flex e-con e-child" data-id="216e1ec" data-element_type="container" data-e-type="container">
+		<div role="region" aria-labelledby="e-n-accordion-item-1183" class="elementor-element elementor-element-b8e4867 e-con-full e-flex e-con e-child" data-id="b8e4867" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-f6e186f elementor-widget elementor-widget-text-editor" data-id="f6e186f" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p><strong>Le paiement sans contact permet :</strong></p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-cbbf281 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="cbbf281" data-element_type="widget" data-e-type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+							<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-circle"></i>						</span>
+										<span class="elementor-icon-list-text">De régler vos achats sans insérer la carte</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-circle"></i>						</span>
+										<span class="elementor-icon-list-text">D’effectuer des paiements rapides et sécurisés</span>
+									</li>
+						</ul>
+						</div>
+				</div>
+				</div>
+		<div role="region" aria-labelledby="e-n-accordion-item-1183" class="elementor-element elementor-element-2805b44 e-con-full e-flex e-con e-child" data-id="2805b44" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-f889296 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="f889296" data-element_type="widget" data-e-type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+							<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<a href="https://bgfi.jbb.cg/accueil-bgfibank-congo/nos-cartes-visa/">
+
+											<span class="elementor-icon-list-text">💡 Des plafonds sont appliqués pour renforcer la sécurité.</span>
+											</a>
+									</li>
+						</ul>
+						</div>
+				</div>
+				</div>
+				</div>
+				</div>
+					</details>
+						<details id="e-n-accordion-item-1184" class="e-n-accordion-item" style="">
+				<summary class="e-n-accordion-item-title" data-accordion-index="5" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-1184">
+					<span class="e-n-accordion-item-title-header"><div class="e-n-accordion-item-title-text"> Vigilance lors de l’utilisation de la carte (prévention des fraudes physiques)  </div></span>
+							<span class="e-n-accordion-item-title-icon">
+			<span class="e-opened"><i aria-hidden="true" class="fas fa-chevron-up"></i></span>
+			<span class="e-closed"><i aria-hidden="true" class="fas fa-chevron-down"></i></span>
+		</span>
+
+						</summary>
+				<div role="region" aria-labelledby="e-n-accordion-item-1184" class="elementor-element elementor-element-45ae989 e-con-full e-flex e-con e-child" data-id="45ae989" data-element_type="container" data-e-type="container">
+		<div role="region" aria-labelledby="e-n-accordion-item-1184" class="elementor-element elementor-element-f9c86cd e-con-full e-flex e-con e-child" data-id="f9c86cd" data-element_type="container" data-e-type="container">
+		<div role="region" aria-labelledby="e-n-accordion-item-1184" class="elementor-element elementor-element-9827afb e-con-full e-flex e-con e-child" data-id="9827afb" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-b6b2774 elementor-widget elementor-widget-text-editor" data-id="b6b2774" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p><strong>Soyez attentif :</strong></p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-3bcf96b elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="3bcf96b" data-element_type="widget" data-e-type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+							<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-circle"></i>						</span>
+										<span class="elementor-icon-list-text">Ne pas utiliser un DAB/GAB présentant un élément suspect</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-circle"></i>						</span>
+										<span class="elementor-icon-list-text">Ne pas accepter l’aide d’un inconnu Vérifier le montant affiché avant validatio</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-circle"></i>						</span>
+										<span class="elementor-icon-list-text">Ne jamais perdre de vue votre carte chez un commerçant</span>
+									</li>
+						</ul>
+						</div>
+				</div>
+				</div>
+				</div>
+				</div>
+					</details>
+						<details id="e-n-accordion-item-1185" class="e-n-accordion-item" style="">
+				<summary class="e-n-accordion-item-title" data-accordion-index="6" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-1185">
+					<span class="e-n-accordion-item-title-header"><div class="e-n-accordion-item-title-text">  Sécurité des paiements en ligne </div></span>
+							<span class="e-n-accordion-item-title-icon">
+			<span class="e-opened"><i aria-hidden="true" class="fas fa-chevron-up"></i></span>
+			<span class="e-closed"><i aria-hidden="true" class="fas fa-chevron-down"></i></span>
+		</span>
+
+						</summary>
+				<div role="region" aria-labelledby="e-n-accordion-item-1185" class="elementor-element elementor-element-f64ceaf e-con-full e-flex e-con e-child" data-id="f64ceaf" data-element_type="container" data-e-type="container">
+		<div role="region" aria-labelledby="e-n-accordion-item-1185" class="elementor-element elementor-element-06266a0 e-con-full e-flex e-con e-child" data-id="06266a0" data-element_type="container" data-e-type="container">
+		<div role="region" aria-labelledby="e-n-accordion-item-1185" class="elementor-element elementor-element-a4bf3c4 e-con-full e-flex e-con e-child" data-id="a4bf3c4" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-e197c1d elementor-widget elementor-widget-text-editor" data-id="e197c1d" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p><strong>Restez vigilant lors de vos achats en ligne :</strong></p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-6f273dc elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="6f273dc" data-element_type="widget" data-e-type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+							<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-circle"></i>						</span>
+										<span class="elementor-icon-list-text">N’achetez que sur des sites fiables</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-circle"></i>						</span>
+										<span class="elementor-icon-list-text">Vérifiez la présence de « https » dans l’adresse</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-circle"></i>						</span>
+										<span class="elementor-icon-list-text">Ne cliquez jamais sur un lien reçu par email ou SMS</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-circle"></i>						</span>
+										<span class="elementor-icon-list-text">Évitez de sauvegarder les données de votre carte en ligne</span>
+									</li>
+						</ul>
+						</div>
+				</div>
+				</div>
+		<div role="region" aria-labelledby="e-n-accordion-item-1185" class="elementor-element elementor-element-edf8f89 e-con-full e-flex e-con e-child" data-id="edf8f89" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-c923dd8 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="c923dd8" data-element_type="widget" data-e-type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+							<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<a href="https://bgfi.jbb.cg/accueil-bgfibank-congo/nos-cartes-visa/">
+
+											<span class="elementor-icon-list-text">🔐 Qu’est-ce que le 3D Secure ?</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://bgfi.jbb.cg/accueil-bgfibank-congo/nos-cartes-visa/">
+
+											<span class="elementor-icon-list-text">Le 3D Secure est un 
+protocole de sécurité qui permet de confirmer votre identité lors d’un 
+paiement en ligne, grâce à un code envoyé par SMS ou via une application
+ sécurisée.</span>
+											</a>
+									</li>
+						</ul>
+						</div>
+				</div>
+				</div>
+				</div>
+				</div>
+					</details>
+						<details id="e-n-accordion-item-1186" class="e-n-accordion-item">
+				<summary class="e-n-accordion-item-title" data-accordion-index="7" tabindex="-1" aria-expanded="false" aria-controls="e-n-accordion-item-1186">
+					<span class="e-n-accordion-item-title-header"><div class="e-n-accordion-item-title-text">  En cas de perte, vol ou anomalie </div></span>
+							<span class="e-n-accordion-item-title-icon">
+			<span class="e-opened"><i aria-hidden="true" class="fas fa-chevron-up"></i></span>
+			<span class="e-closed"><i aria-hidden="true" class="fas fa-chevron-down"></i></span>
+		</span>
+
+						</summary>
+				<div role="region" aria-labelledby="e-n-accordion-item-1186" class="elementor-element elementor-element-e840394 e-con-full e-flex e-con e-child" data-id="e840394" data-element_type="container" data-e-type="container">
+		<div role="region" aria-labelledby="e-n-accordion-item-1186" class="elementor-element elementor-element-3e5a404 e-con-full e-flex e-con e-child" data-id="3e5a404" data-element_type="container" data-e-type="container">
+		<div role="region" aria-labelledby="e-n-accordion-item-1186" class="elementor-element elementor-element-363e9f9 e-con-full e-flex e-con e-child" data-id="363e9f9" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-ff39344 elementor-widget elementor-widget-text-editor" data-id="ff39344" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p><strong>Agissez immédiatement :</strong></p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-e0cb4ed elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="e0cb4ed" data-element_type="widget" data-e-type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+							<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-circle"></i>						</span>
+										<span class="elementor-icon-list-text">Faites opposition dès que vous constatez la perte, le vol ou une utilisation suspecte par écrit auprès de votre banque</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-circle"></i>						</span>
+										<span class="elementor-icon-list-text">En cas de vol ou fraude, il est recommandé de déposer plainte</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-circle"></i>						</span>
+										<span class="elementor-icon-list-text">À l’étranger : contactez le numéro d’urgence ou votre gestionnaire de compte.</span>
+									</li>
+						</ul>
+						</div>
+				</div>
+				</div>
+		<div role="region" aria-labelledby="e-n-accordion-item-1186" class="elementor-element elementor-element-fd93537 e-con-full e-flex e-con e-child" data-id="fd93537" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-4c01a79 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="4c01a79" data-element_type="widget" data-e-type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+							<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<a href="https://bgfi.jbb.cg/accueil-bgfibank-congo/nos-cartes-visa/">
+
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="far fa-comment"></i>						</span>
+										<span class="elementor-icon-list-text"><b>BGFIAlert</b> </span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://bgfi.jbb.cg/accueil-bgfibank-congo/nos-cartes-visa/">
+
+											<span class="elementor-icon-list-text">Détection rapide des anomalies</span>
+											</a>
+									</li>
+						</ul>
+						</div>
+				</div>
+				</div>
+				</div>
+				</div>
+					</details></div></div></div>
+<script>
+(function () {
+  function syncAccordionState(root) {
+    root.querySelectorAll('details.e-n-accordion-item').forEach(function (item, index) {
+      var summary = item.querySelector('summary.e-n-accordion-item-title');
+      if (!summary) return;
+      summary.setAttribute('aria-expanded', item.open ? 'true' : 'false');
+      summary.setAttribute('tabindex', index === 0 || item.open ? '0' : '-1');
+    });
+  }
+
+  function setupStaticAccordions() {
+    document.querySelectorAll('.elementor-widget-n-accordion .e-n-accordion').forEach(function (accordion) {
+      var items = Array.prototype.slice.call(accordion.querySelectorAll(':scope > details.e-n-accordion-item'));
+      items.forEach(function (item) {
+        item.open = false;
+        item.addEventListener('toggle', function () {
+          if (item.open) {
+            items.forEach(function (other) {
+              if (other !== item) other.open = false;
+            });
+          }
+          syncAccordionState(accordion);
+        });
+      });
+      syncAccordionState(accordion);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupStaticAccordions);
+  } else {
+    setupStaticAccordions();
+  }
+})();
+</script>

@@ -115,7 +115,7 @@ export function ParallaxBand() {
                 className="absolute left-0 top-0 h-[130%] w-full object-cover will-change-transform"
                 style={{ transform: 'translate3d(0, 0, 0) scale(1.2)' }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/50 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/50 via-transparent to-transparent" />
             </div>
 
             {/* Floating badge */}

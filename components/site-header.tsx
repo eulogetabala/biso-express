@@ -40,9 +40,9 @@ export function SiteHeader() {
       <div className="mx-auto flex h-28 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="group flex items-center gap-2" aria-label="Biso Express — accueil">
           <img
-            src="/images/biso-logo.png"
+            src="/images/biso.jpg"
             alt="Biso Express"
-            className="h-[115px] w-auto rounded-lg bg-white p-1"
+            className="h-[115px] w-auto rounded-lg bg-white object-contain p-1"
           />
         </Link>
 

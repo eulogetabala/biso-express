@@ -74,7 +74,7 @@ export function ServicesList() {
                   alt={s.name}
                   className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/40 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-secondary/40 via-transparent to-transparent" />
                 <span
                   className={cn(
                     'absolute left-4 top-4 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wide',

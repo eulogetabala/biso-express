@@ -9,7 +9,7 @@ const contacts = [
 export function ContactCta() {
   return (
     <section id="contact" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-      <div className="relative overflow-hidden rounded-[2.5rem] border border-border bg-gradient-to-br from-primary via-primary to-[#0d1745] text-primary-foreground">
+      <div className="relative overflow-hidden rounded-[2.5rem] border border-border bg-gradient-to-br from-secondary via-secondary to-[#0d1745] text-secondary-foreground">
         {/* wax pattern overlay */}
         <img
           src="/images/wax-pattern.png"
@@ -26,7 +26,7 @@ export function ContactCta() {
             <h2 className="font-display text-4xl font-bold leading-tight tracking-tight text-balance sm:text-5xl">
               Un partenariat, un projet, une question&nbsp;?
             </h2>
-            <p className="mt-5 max-w-xl text-lg text-primary-foreground/80">
+            <p className="mt-5 max-w-xl text-lg text-secondary-foreground/80">
               Que vous soyez restaurateur, transporteur, commerçant ou entreprise,
               Biso Express construit des partenariats durables partout au Congo.
               Parlons de la façon dont nos marques peuvent vous accompagner.
@@ -40,7 +40,7 @@ export function ContactCta() {
               </a>
               <a
                 href="#services"
-                className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/40 bg-primary-foreground/10 px-7 py-3.5 text-base font-semibold text-primary-foreground backdrop-blur transition-colors hover:bg-primary-foreground/20"
+                className="inline-flex items-center gap-2 rounded-full border border-secondary-foreground/40 bg-secondary-foreground/10 px-7 py-3.5 text-base font-semibold text-secondary-foreground backdrop-blur transition-colors hover:bg-secondary-foreground/20"
               >
                 Revoir nos marques
               </a>
@@ -51,13 +51,13 @@ export function ContactCta() {
             {contacts.map((c) => (
               <li
                 key={c.label}
-                className="flex items-center gap-4 rounded-2xl border border-primary-foreground/20 bg-primary-foreground/5 p-4 backdrop-blur"
+                className="flex items-center gap-4 rounded-2xl border border-secondary-foreground/20 bg-secondary-foreground/5 p-4 backdrop-blur"
               >
                 <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-accent text-accent-foreground">
                   <c.icon className="size-5" />
                 </span>
                 <div>
-                  <p className="text-xs uppercase tracking-wide text-primary-foreground/60">
+                  <p className="text-xs uppercase tracking-wide text-secondary-foreground/60">
                     {c.label}
                   </p>
                   <p className="font-display text-lg font-semibold">{c.value}</p>

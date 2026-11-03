@@ -52,9 +52,11 @@
   --card-foreground: oklch(0.2 0.035 265);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.2 0.035 265);
-  --primary: oklch(0.34 0.13 266);
-  --primary-foreground: oklch(0.99 0.005 250);
-  --secondary: oklch(0.55 0.15 252);
+  /* Couleur principale : orange Biso */
+  --primary: oklch(0.65 0.19 45);
+  --primary-foreground: oklch(0.2 0.04 265);
+  /* Couleur secondaire : bleu Biso */
+  --secondary: oklch(0.34 0.13 266);
   --secondary-foreground: oklch(0.99 0.005 250);
   --muted: oklch(0.95 0.006 255);
   --muted-foreground: oklch(0.48 0.03 262);
@@ -63,7 +65,7 @@
   --destructive: oklch(0.6 0.22 25);
   --border: oklch(0.9 0.012 258);
   --input: oklch(0.9 0.012 258);
-  --ring: oklch(0.34 0.13 266);
+  --ring: oklch(0.65 0.19 45);
   --radius: 0.75rem;
 }
 

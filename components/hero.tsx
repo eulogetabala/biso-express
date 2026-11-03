@@ -88,7 +88,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-[88vh] items-center overflow-hidden bg-primary"
+      className="relative flex min-h-[88vh] items-center overflow-hidden bg-secondary"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -106,8 +106,8 @@ export function Hero() {
                 active={i === active}
                 className="h-full w-full object-cover transition-transform duration-[9000ms] ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/55 to-primary/10" />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/75 via-transparent to-primary/35" />
+              <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/55 to-secondary/10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-secondary/75 via-transparent to-secondary/35" />
             </div>
           ))}
         </div>
