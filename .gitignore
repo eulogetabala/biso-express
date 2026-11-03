@@ -14,3 +14,5 @@ node_modules
 .next/
 .DS_Store
 *.tsbuildinfo
+# Static export (not used — site is server-rendered by Netlify)
+out/
